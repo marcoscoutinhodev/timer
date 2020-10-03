@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+.audio {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    padding-top: 3rem;
+}
+
+form {
+    width: 100vw;
+    height: 100%;
+    margin: 3rem 0;
+}
+
+.minute-input, .second-input, .btn-start {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.select {
+    width: 8rem;
+    margin: 0 1rem;
+}
+
+#startButton {
+    font-size: 1.2rem;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    width: 30%;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+#display {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100%;
+}

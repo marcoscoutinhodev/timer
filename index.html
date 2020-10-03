@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <audio src="audio/AlarmSound.mp3" id="sound" class="audio"></audio>
+
+    <div class="container">
+        <h2 class="title">Timer</h2>
+        
+        <form>
+            <div class="minute-input">
+                <label for="minute"><h2>Minutes:</h2></label>
+                <select name="minute" id="minuteEntry" class="select"></select>
+            </div>
+
+            <div class="second-input">
+                <label for="second"><h2>Seconds: </h2></label>
+                <select name="second" id="secondEntry" class="select"></select>
+            </div>
+
+            <div class="btn-start">
+                <button type="button" id="startButton">Start</button>
+            </div>
+        </form>
+
+        <div id="display">
+            <p class="minutesTimer">00</p> :
+            <p class="secondsTimer">00</p>
+        </div>
+        
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
