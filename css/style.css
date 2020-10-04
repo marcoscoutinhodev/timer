@@ -56,4 +56,5 @@ form {
     font-size: 2rem;
     font-weight: bold;
     width: 100%;
+    visibility: hidden;
 }

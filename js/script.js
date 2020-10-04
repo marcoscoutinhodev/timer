@@ -23,15 +23,20 @@ function main() {
 
     function startTimer() {
         if(isTimerOff) {
+            isTimerOff = false; 
+            
             let currentMinute = inputMinutes.value;
             let currentSecond = inputSecond.value;
             let interval;
             
-            isTimerOff = false; 
+            btnStart.style.opacity = ".5";
 
             interval = setInterval(countTime, 1000);
 
             function updateDisplayTime() {
+                document.querySelector("#display")
+                    .style.visibility = "visible";
+
                 function checkCount(currentTime, ref) {
                     if(currentTime >= 10) {
                         ref.innerText = currentTime;
@@ -55,14 +60,15 @@ function main() {
                         currentMinute--;
                         currentSecond = 59;
                     } else {
-                        const sound = document.querySelector("#sound");
-
-                        sound.play();
+                        document.querySelector("#sound").play();
+                        
                         clearInterval(interval);
-
+                        
                         setTimeout(() => {
                             alert("Time is Over!");
-                        }, 1000);
+                        }, 10);
+                        
+                        btnStart.style.opacity = "1";
 
                         isTimerOff = true;
                     }
